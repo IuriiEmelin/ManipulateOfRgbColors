@@ -9,6 +9,8 @@ import UIKit
 
 final class ViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
     @IBOutlet var coloredView: UIView!
     
     @IBOutlet var labelForRed: UILabel!
@@ -25,12 +27,7 @@ final class ViewController: UIViewController {
         
     }
     
-    private func changeViewColor() {
-        coloredView.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value),
-                                              green: CGFloat(greenSlider.value),
-                                              blue: CGFloat(blueSlider.value),
-                                              alpha: 1)
-    }
+    // MARK: - IBActions
     
     @IBAction func valueRedSliderChange(_ sender: UISlider) {
         labelForRed.text = String(format: "%.2f", redSlider.value)
@@ -52,6 +49,14 @@ final class ViewController: UIViewController {
         changeViewColor()
     }
     
+    // MARK: - Private Methods
+    
+    private func changeViewColor() {
+        coloredView.backgroundColor = UIColor(displayP3Red: CGFloat(redSlider.value),
+                                              green: CGFloat(greenSlider.value),
+                                              blue: CGFloat(blueSlider.value),
+                                              alpha: 1)
+    }
     
 }
 
