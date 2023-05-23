@@ -11,7 +11,7 @@ protocol SettingsViewControllerDelegate: AnyObject {
     func setColor(_ color: UIColor)
 }
 
-final class MainViewController: UITabBarController {
+final class MainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let settingsVC = segue.destination as? SettingsViewController else { return }
         settingsVC.delegate = self
