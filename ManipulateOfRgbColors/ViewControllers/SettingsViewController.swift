@@ -41,7 +41,7 @@ final class SettingsViewController: UIViewController {
         setValue(for: redTextField, greenTextField, blueTextField)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)  {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
